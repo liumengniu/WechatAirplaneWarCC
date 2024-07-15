@@ -159,9 +159,7 @@ export class Game extends Component {
 	 * @param selfCollider
 	 * @param otherCollider
 	 */
-	onBulletContact(selfCollider, otherCollider, contact) {
-		console.log(contact, 'Collision detected!', selfCollider, otherCollider);
-	}
+	onBulletContact(selfCollider, otherCollider, contact) {}
 	
 	/***
 	 * 敌机碰撞检测
@@ -170,7 +168,6 @@ export class Game extends Component {
 	 * @param otherCollider
 	 */
 	onMonsterContact(selfCollider, otherCollider, contact) {
-		console.log('Collision detected222!', selfCollider, otherCollider);
 		if (otherCollider?.node?.name === "bullet") { //子弹击中敌机
 			// 需要在碰撞周期外销毁
 			setTimeout(() => {
